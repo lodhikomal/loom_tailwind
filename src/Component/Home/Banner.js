@@ -32,12 +32,12 @@ import gapImg from "../../assets/gap.svg";
 function Banner() {
   return (
     <div>
-      <h1 className="mt-6 pt-10 text-center text-[#2B1C50] text-[2.5rem] font-bold px-48 mobile:pl-[1rem] pr-[1rem]">
+      <h1 className="mt-6 pt-10 text-center text-[#2B1C50] text-[2.5rem] font-bold px-48 mobile:pl-[1rem] mobile:pr-[1rem]">
         More than 21 million people across 200,000 companies choose Loom
       </h1>
 
       {/* <div className="flex"> */}
-      <div class="relative flex overflow-x-hidden">
+      <div class="relative flex overflow-x-hidden  -z-10">
         <div class="py-12 animate-marquee whitespace-nowrap flex gap-24 items-center ">
           <img
             src={hubImg}
@@ -70,7 +70,7 @@ function Banner() {
           <img src={launchImg} alt="" className="h-[2rem] w-[14rem]"></img>
         </div>
       </div>
-      <div class="relative flex overflow-x-hidden">
+      <div class="relative flex overflow-x-hidden -z-10">
         <div class=" pb-12 animate-marquee whitespace-nowrap flex gap-24 items-center ">
           <img src={fordImg} alt="" className=" h-[1rem] w-[14rem]" />
 
@@ -90,7 +90,7 @@ function Banner() {
           <img src={asanaImg} alt="" className="h-[2rem] w-[14rem]"></img>
         </div>
       </div>
-      <div class="relative flex overflow-x-hidden">
+      <div class="relative flex overflow-x-hidden -z-10">
         <div class="pb-12 animate-marquee whitespace-nowrap flex gap-24 items-center ">
           <img src={wayImg} alt="" className=" h-[2rem] w-[14rem]" />
 

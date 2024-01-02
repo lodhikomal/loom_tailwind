@@ -3,6 +3,7 @@ import Navbar from "./Home/Navbar";
 import Hero from "./Home/Hero";
 import Banner from "./Home/Banner";
 import Review from "./Home/Review";
+import Recorder from "./Home/Recorder";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Hero />
       <Banner />
       <Review />
+      <Recorder />
     </div>
   );
 }

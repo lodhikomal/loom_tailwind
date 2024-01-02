@@ -8,7 +8,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <div className="fixed top-0 -left-5 -right-5 shadow-lg bg-white flex justify-between items-center py-5 px-12 mx-5  mobile:px-0 ">
+      <div className="fixed top-0 -left-5 -right-5 shadow-2xl placeholder-opacity-100 bg-white flex justify-between items-center py-5 px-12 mx-5  mobile:px-0 ">
         <div className="flex justify-center items-center gap-2 ">
           <img src={logoImg} alt="" className="max-h-12 mobile:h-10 "></img>
         </div>

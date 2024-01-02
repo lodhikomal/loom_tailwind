@@ -11,12 +11,12 @@ function Hero() {
           Easily record and share AI-powered video messages with your teammates
           and customers to supercharge productivity
         </p>
-        <button className=" border-8 btn mobile:inline-flex max-h-24 w-1/4 my-5 justify-center text-2xl mobile:w-full">
+        <button className=" border-8 btn mobile:inline-flex max-h-24 w-[30%] my-5 justify-center text-2xl mobile:w-full">
           Get loom for free
         </button>
       </div>
 
-      <div className=" shadow-lg rounded-[2rem]">
+      <div className="shadow-2xl shadow-[#9791EC]  rounded-[2rem]">
         <video autoPlay loop muted playsInline className="rounded-[2rem] ">
           <source
             src="https://cdn.loom.com/sessions/thumbnails/313bf71d20ca47b2a35b6634cefdb761-00001.mp4"
