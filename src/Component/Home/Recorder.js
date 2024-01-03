@@ -1,6 +1,39 @@
-import React from "react";
-
+import { faPause, faPlay, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useRef, useState } from "react";
 function Recorder() {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  const togglePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+  const handleTimeUpdate = () => {
+    if (videoRef.current) {
+      setCurrentTime(videoRef.current.currentTime);
+    }
+  };
+  useEffect(() => {
+    // Add event listener for time updates
+    if (videoRef.current) {
+      videoRef.current.addEventListener("timeupdate", handleTimeUpdate);
+    }
+
+    // Remove event listener on component unmount
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.removeEventListener("timeupdate", handleTimeUpdate);
+      }
+    };
+  }, []);
   return (
     <div className="flex flex-col gap-[3rem] ">
       <div>
@@ -11,8 +44,8 @@ function Recorder() {
           Record in a few clicks. Share anywhere. Collaborate better.
         </p>
       </div>
-      <div className="relative -z-10 flex mobile:flex-col justify-center gap-[5rem] bg-[#EFF0FF] px-5 py-16 w-[93%] mx-auto rounded-[2rem]">
-        <div className="w-1/3 py-10 mobile:w-full">
+      <div className="relative  flex mobile:flex-col justify-center gap-[5rem] bg-[#EFF0FF] px-28 py-24 w-[93%] mx-auto rounded-[2rem]">
+        <div className="w-1/2 py-10 mobile:w-full relative">
           <svg
             className="rounded-3xl RecordScreenSchedule_isRemoving__enEx8 aspect-square font-medium object-cover text-18 w-full"
             viewBox="0 0 713 713"
@@ -115,7 +148,7 @@ function Recorder() {
             <text fill="#b1acbf" x="85" y="190">
               Focus Work
             </text>
-            <g class="RecordScreenSchedule_remove5__7ZG7t">
+            <g className="RecordScreenSchedule_remove5__7ZG7t animate-fade">
               <line
                 stroke="#3b2d5e"
                 x1="71.2"
@@ -135,7 +168,10 @@ function Recorder() {
                 Quarterly Budget Meeting
               </text>
             </g>
-            <g class="RecordScreenSchedule_remove4__joiks">
+            <g
+              class="RecordScreenSchedule_remove4__joiks"
+              className="animate-fade"
+            >
               <path
                 d="M77.2,506h597.1c3.3,0,6,2.7,6,6v35.1c0,3.3-2.7,6-6,6H77.2c-3.3,0-6-2.7-6-6V512   C71.2,508.7,73.9,506,77.2,506z"
                 fill="#3b2d5e"
@@ -148,7 +184,10 @@ function Recorder() {
                 Project Review
               </text>
             </g>
-            <g class="RecordScreenSchedule_remove3__mtjf_">
+            <g
+              class="RecordScreenSchedule_remove3__mtjf_"
+              className="animate-fade"
+            >
               <line
                 stroke="#3b2d5e"
                 x1="71.2"
@@ -168,7 +207,10 @@ function Recorder() {
                 Q4 Campaign Results
               </text>
             </g>
-            <g class="RecordScreenSchedule_remove2__MgGdt">
+            <g
+              class="RecordScreenSchedule_remove2__MgGdt"
+              className="animate-fade"
+            >
               <path
                 d="M77.2,261.4h597.1c3.3,0,6,2.7,6,6V346c0,3.3-2.7,6-6,6H77.2c-3.3,0-6-2.7-6-6v-78.6   C71.2,264.1,73.9,261.4,77.2,261.4z"
                 fill="#3b2d5e"
@@ -182,26 +224,75 @@ function Recorder() {
               </text>
             </g>
           </svg>
+          <div className="absolute top-[10.5rem] left-[10rem] mobile:top-[5.5rem] mobile:left-[5rem]">
+            <video
+              ref={videoRef}
+              autoPlay
+              muted
+              loop
+              playsinline
+              className="RecordScreenAnimation_cam__ivFyG size-44 object-cover
+              relative rounded-full mx-auto z-10 mobile:size-28"
+            >
+              <source
+                src="https://cdn.loom.com/assets/marketing/bubbs/angelina.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div
+              className="bg-white  flex items-center justify-center rounded-[40px] 
+            h-14 w-[12rem] left-[-10px] bottom-[-3.2rem] gap-[15px] border-[5px] border-[#807796] absolute "
+            >
+              <button
+                className="h-4 w-4 bg-red-500 rounded-sm cursor-pointer"
+                onClick={togglePlayPause}
+              ></button>
+              <span>{currentTime.toFixed(2)}</span>
+
+              <FontAwesomeIcon
+                icon={faPause}
+                className="cursor-pointer"
+                onClick={togglePlayPause}
+              />
+
+              <FontAwesomeIcon icon={faTrash} className="cursor-pointer" />
+            </div>
+          </div>
         </div>
-        <div className="w-1/3 mobile:w-full py-10 flex flex-col items-start gap-10 justify-center">
-          <div className="flex gap-4 ">
-            <span className="animate-pulse size-8 bg-[#eb7267] border-[#FFEDEC] border-8 rounded-full">
+        <div className="w-1/2 mobile:w-full py-10 flex flex-col items-start gap-10 justify-center">
+          <div className="flex gap-4  ">
+            <span className="mt-2 animate-pulse h-[30px] w-[3rem] bg-[#eb7267] border-[#FFEDEC] border-8 rounded-full">
               {" "}
             </span>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 pr-28">
               <h1 className="text-3xl text-start text-[#43204F]">
                 Lightning fast screen recording
               </h1>
               <p className="text-md leading-loose text-start text-[#43204F]">
                 Easily{" "}
-                <a href="#" className=" underline hover:no-underline">
+                <span
+                  className="border-b-[1px] border-[#43204F] pb-0 hover:border-b-0 
+                cursor-pointer  leading-3"
+                >
                   record your screen
-                </a>{" "}
+                </span>{" "}
                 and camera. Record on any device using Loom’s{" "}
-                <a href="#">Chrome extension</a>, <a href="">desktop</a> app or
-                mobile app.
+                <span
+                  className="border-b-[1px] border-[#43204F] pb-0 hover:border-b-0 
+                cursor-pointer  leading-3"
+                >
+                  Chrome extension
+                </span>
+                ,
+                <span
+                  className="border-b-[1px] border-[#43204F] pb-0 hover:border-b-0 
+                cursor-pointer  leading-3"
+                >
+                  desktop
+                </span>{" "}
+                app or mobile app.
               </p>
-              <button className="btn h-10">Download now</button>
+              <button className="btn h-10 cursor-pointer">Download now</button>
             </div>
           </div>
         </div>

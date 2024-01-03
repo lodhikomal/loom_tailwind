@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div className="bg-[rgb(209,209,247)] px-28 py-16 flex flex-col items-center justify-center mobile:px-3 mobile:[py-10]">
       <div className="flex items-center flex-col my-16 py-6 mobile:items-start">
-        <h1 className="text-[#2B1C50] text-center text-[4rem] font-medium  mobile:text-left mobile:text-4xl">
+        <h1 className="text-[#2B1C50] text-center text-[4rem] font-custom  mobile:text-left mobile:text-4xl">
           One video is worth a thousand words
         </h1>
         <p className="text-[#3D2E7C] my-5 pt-3 pb-3 leading-[3rem] mobile:text-left mobile:text-xl mobile:px-1 text-3xl pl-24 pr-24">

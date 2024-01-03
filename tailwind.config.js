@@ -10,11 +10,13 @@ module.exports = {
         marquee: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
-          
         },
       },
       screens: {
         mobile: { min: "320px", max: "768px" },
+      },
+      fontFamily: {
+        custom: ["circular", "sans-serif"],
       },
     },
   },

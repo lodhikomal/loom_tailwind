@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "circular"; /*Can be any text*/
+  src: url("https://fontdafont.com/circular-font-free-download/#google_vignette")
+    format("truetype");
+}
+
 @tailwind base;
 
 @tailwind components;
@@ -6,20 +12,12 @@
           text-[#EFF0FF]  border-[#BBBDF1] border-4 text-sm  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 mobile:hidden;
 }
 @tailwind utilities;
-
 @layer base {
   body {
-    font-family: "Poppins", sans-serif;
-    font-family: "Poppins", sans-serif;
-    font-family: "Roboto", sans-serif;
-    font-family: "Roboto Slab", serif;
+    font-family: "circular", "Poppins", sans-serif;
   }
 }
-@font-face {
-  font-family: "Circular"; /*Can be any text*/
-  src: url("https://befonts.com/downfile/149a35668fbd45b2654e1e1287ca8ae7.222834.ttf")
-    format("ttf");
-}
+
 @keyframes pulse {
   0%,
   100% {
@@ -32,4 +30,15 @@
 
 .animate-pulse {
   animation: pulse 1.8s infinite forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.animate-fade {
+  animation: fade 4s forwards; /* Adjust the duration and timing function as needed */
 }

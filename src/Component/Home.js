@@ -4,6 +4,7 @@ import Hero from "./Home/Hero";
 import Banner from "./Home/Banner";
 import Review from "./Home/Review";
 import Recorder from "./Home/Recorder";
+import Features from "./Home/Features";
 
 function Home() {
   return (
@@ -13,6 +14,8 @@ function Home() {
       <Banner />
       <Review />
       <Recorder />
+      <Features />
+      
     </div>
   );
 }
