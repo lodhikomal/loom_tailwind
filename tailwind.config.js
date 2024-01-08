@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        bgImg: " url('../public/assets/background.webp')",
+      },
       animation: {
         marquee: "marquee 45s linear infinite",
       },
