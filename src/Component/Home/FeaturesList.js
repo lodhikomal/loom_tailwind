@@ -31,7 +31,10 @@ function FeaturesList() {
           list2={"Video and viewer insights"}
         />
       </div>
-      <button className="cursor-pointer text-sm leading-3 border-black mt-10 pt-24  border-b-[1px] bottom-5 w-fit">
+      <button
+        className="cursor-pointer text-sm leading-3 border-black mt-10 pt-24 
+      mobile:pt-0 border-b-[1px] bottom-5 w-fit"
+      >
         See all Features
       </button>
     </div>

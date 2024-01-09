@@ -7,11 +7,17 @@ function Hero() {
         <h1 className="text-[#2B1C50] text-center text-[4rem] font-custom  mobile:text-left mobile:text-4xl">
           One video is worth a thousand words
         </h1>
-        <p className="text-[#3D2E7C] my-5 pt-3 pb-3 leading-[3rem] mobile:text-left mobile:text-xl mobile:px-1 text-3xl pl-24 pr-24">
+        <p
+          className="text-[#3D2E7C] my-5 pt-3 pb-3 leading-[3rem] mobile:text-left 
+        mobile:text-xl mobile:px-1 text-3xl pl-24 pr-24 tablet:px-6"
+        >
           Easily record and share AI-powered video messages with your teammates
           and customers to supercharge productivity
         </p>
-        <button className=" border-8 btn mobile:inline-flex max-h-24 w-[30%] my-5 justify-center text-2xl mobile:w-full">
+        <button
+          className=" border-8 btn mobile:inline-flex max-h-24 w-fit my-5 justify-center text-2xl mobile:w-fit
+          "
+        >
           Get loom for free
         </button>
       </div>
@@ -23,7 +29,7 @@ function Hero() {
             type="video/mp4"
           />
         </video>
-        <div className="absolute top-[58rem] left-[40rem] mobile:top-[44rem] mobile:left-[40%]">
+        <div className="absolute top-[58rem] left-[40rem] tablet:top-[60rem] tablet:left-[22rem] mobile:top-[44rem] mobile:left-[40%]">
           <svg viewBox="0 0 90 90" fill="none" className="w-20 ">
             <path
               fill="#ffffff"

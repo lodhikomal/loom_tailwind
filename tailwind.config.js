@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -16,7 +18,8 @@ module.exports = {
         },
       },
       screens: {
-        mobile: { min: "320px", max: "768px" },
+        mobile: { min: "320px", max: "767px" },
+        tablet: { min: "768px", max: "1024px" },
       },
       fontFamily: {
         custom: ["circular", "sans-serif"],
@@ -24,4 +27,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+});

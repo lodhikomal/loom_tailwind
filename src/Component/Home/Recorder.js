@@ -44,7 +44,10 @@ function Recorder() {
           Record in a few clicks. Share anywhere. Collaborate better.
         </p>
       </div>
-      <div className="relative  flex mobile:flex-col justify-center gap-[5rem] bg-[#EFF0FF] px-28 py-24 w-[93%] mx-auto rounded-[2rem]">
+      <div
+        className="relative  flex mobile:flex-col justify-center gap-[5rem] 
+      bg-[#EFF0FF] px-28 py-24 w-[93%] mx-auto rounded-[2rem] mobile:px-6 mobile:py-6 tablet:px-4"
+      >
         <div className="w-1/2 py-10 mobile:w-full relative">
           <svg
             className="rounded-3xl RecordScreenSchedule_isRemoving__enEx8 aspect-square font-medium object-cover text-18 w-full"
@@ -224,7 +227,10 @@ function Recorder() {
               </text>
             </g>
           </svg>
-          <div className="absolute top-[10.5rem] left-[10rem] mobile:top-[5.5rem] mobile:left-[5rem]">
+          <div
+            className="absolute top-[10.5rem] left-[10rem] mobile:top-[5.5rem]
+           mobile:left-[5rem] tablet:top-[4.5rem] tablet:left-[5rem]"
+          >
             <video
               ref={videoRef}
               autoPlay
@@ -232,7 +238,7 @@ function Recorder() {
               loop
               playsinline
               className="RecordScreenAnimation_cam__ivFyG size-44 object-cover
-              relative rounded-full mx-auto z-10 mobile:size-28"
+              relative rounded-full mx-auto z-[1] mobile:size-28"
             >
               <source
                 src="https://cdn.loom.com/assets/marketing/bubbs/angelina.mp4"
@@ -241,7 +247,8 @@ function Recorder() {
             </video>
             <div
               className="bg-white  flex items-center justify-center rounded-[40px] 
-            h-14 w-[12rem] left-[-10px] bottom-[-3.2rem] gap-[15px] border-[5px] border-[#807796] absolute "
+            h-14 w-[12rem] left-[-10px] mobile:left-[-36px] 
+            bottom-[-3.2rem] gap-[15px] border-[5px] border-[#807796] absolute "
             >
               <button
                 className="h-4 w-4 bg-red-500 rounded-sm cursor-pointer"
@@ -259,12 +266,18 @@ function Recorder() {
             </div>
           </div>
         </div>
-        <div className="w-1/2 mobile:w-full py-10 flex flex-col items-start gap-10 justify-center">
+        <div
+          className="w-1/2 mobile:w-full py-10 flex flex-col items-start gap-10
+         justify-center"
+        >
           <div className="flex gap-4  ">
-            <span className="mt-2 animate-pulse h-[30px] w-[3rem] bg-[#eb7267] border-[#FFEDEC] border-8 rounded-full">
+            <span
+              className="mt-2 animate-pulse h-[30px] w-[3rem] bg-[#eb7267]
+             border-[#FFEDEC] border-8 rounded-full"
+            >
               {" "}
             </span>
-            <div className="flex flex-col gap-6 pr-28">
+            <div className="flex flex-col gap-6 pr-28 tablet:pr-0 mobile:pr-0">
               <h1 className="text-3xl text-start text-[#43204F]">
                 Lightning fast screen recording
               </h1>

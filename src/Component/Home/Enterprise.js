@@ -7,7 +7,7 @@ function Enterprise() {
       <h1 className="text-white text-5xl font-bold py-3">
         Loom for Enterprise
       </h1>
-      <p className="text-[#BBB6C6] text-2xl py-8 px-[16rem]">
+      <p className="text-[#BBB6C6] text-2xl py-8 px-[16rem] mobile:px-4 tablet:px-4">
         Loom for Enterprise helps teams securely manage and organize async video
         communication at scale
       </p>
@@ -30,8 +30,16 @@ function Enterprise() {
         </span>{" "}
         Learn More
       </button>
-      <img src={enterImg} alt="" className="px-[8rem] py-[4rem]"></img>
-      <div className="absolute left-[49rem] bottom-[14rem] z-[1]">
+      <img
+        src={enterImg}
+        alt=""
+        className="px-[8rem] py-[4rem] mobile:px-4 tablet:px-4"
+      ></img>
+      <div
+        className="absolute left-[49rem] bottom-[14rem] z-[1] mobile:left-[15rem]
+      mobile:bottom-[9rem] tablet:left-[25rem]
+      tablet:bottom-[11rem] "
+      >
         <video
           autoPlay
           muted

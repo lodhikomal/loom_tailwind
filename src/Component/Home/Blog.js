@@ -7,14 +7,21 @@ function Blog() {
         <h6 className="text-xs font-bold text-white pt-10 pb-5">
           FROM OUR BLOG
         </h6>
-        <h1 className="text-5xl font-semibold text-white px-16 leading-">
+        <h1
+          className="text-5xl font-semibold text-white px-16 mobile:px-4
+        tablet:px-4 mobile:text-2xl"
+        >
           How to use async video messaging to improve communication
         </h1>
-        <div className="my-10 py-10 grid grid-cols-2 mobile:grid-cols-1 px-32 gap-[5rem] cursor-pointer">
+        <div
+          className="my-10 py-10 grid grid-cols-2 mobile:grid-cols-1 px-32
+        mobile:px-4
+        tablet:px-4 gap-[5rem] cursor-pointer"
+        >
           <div
             className="bg-[#3D2E7C] rounded-3xl flex flex-col gap-5 py-16 px-8 
           text-start transition-transform transform hover:scale-105  
-          hover:shadow-2xl hover:shadow-white "
+          hover:shadow-2xl hover:shadow-white tablet:px-4 mobile:px-4  "
           >
             <h3 className="text-[white] text-2xl">
               When to Choose Synchronous Vs. Asynchronous Communication
@@ -52,7 +59,7 @@ function Blog() {
           <div
             className="bg-[#3D2E7C] rounded-3xl flex flex-col gap-5 py-16 px-8
           text-start transition-transform transform hover:scale-105  
-          hover:shadow-xl hover:shadow-white  "
+          hover:shadow-xl hover:shadow-white tablet:px-4 mobile:px-4  "
           >
             <h3 className="text-[white] text-2xl">
               7 Tips for Overcoming Camera Anxiety
@@ -89,7 +96,7 @@ function Blog() {
             </div>
           </div>
         </div>
-        <button className="btn mx-auto h-10 border-[#3D2E7C]">
+        <button className="btn mx-auto h-10 border-[#3D2E7C] mobile:flex">
           Explore Our Blog
         </button>
       </div>

@@ -32,7 +32,10 @@ import gapImg from "../../assets/gap.svg";
 function Banner() {
   return (
     <div>
-      <h1 className="mt-6 pt-10 text-center text-[#2B1C50] text-[2.5rem] font-bold px-48 mobile:pl-[1rem] mobile:pr-[1rem]">
+      <h1
+        className="mt-6 pt-10 text-center text-[#2B1C50] text-[2.5rem] font-bold px-48
+      tablet:px-6 mobile:pl-[1rem] mobile:pr-[1rem]"
+      >
         More than 21 million people across 200,000 companies choose Loom
       </h1>
 

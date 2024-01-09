@@ -10,7 +10,7 @@ function VideoMsg() {
       <h1 className="text-[3.5rem] font-semibold my-8">
         Video messaging for all use cases
       </h1>
-      <div className="flex gap-[40px] px-12 py-16 mobile:flex-col mobile:px-3">
+      <div className="flex gap-[40px] px-12 py-16 mobile:flex-col mobile:items-center mobile:px-3">
         <div
           class="max-w-sm bg-[#E2EFDD] border  rounded-3xl 
          py-[2rem] shadow hover:shadow-xl[]  hover:blur-sm cursor-pointer"
@@ -31,7 +31,7 @@ function VideoMsg() {
         </div>
         <div
           class="max-w-sm bg-[#F5EAF8] border  rounded-3xl 
-         py-[2rem] shadow hover:shadow-xl[]  hover:blur-sm cursor-pointer"
+         py-[2rem] shadow hover:shadow-xl  hover:blur-sm cursor-pointer"
         >
           <a href="#">
             <img src={card2} alt="" className="rounded-2xl px-[1.5rem]"></img>

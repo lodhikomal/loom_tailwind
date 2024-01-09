@@ -4,7 +4,7 @@ function ListCard(props) {
   const { list, list2 } = props;
   return (
     <>
-      <div className="flex justify-center gap-[3rem]">
+      <div className="flex justify-center gap-[3rem] mobile:flex-col">
         <div className="flex items-center gap-[10px]">
           <div className="bg-[#E9EAF9] rounded-full h-[35px] w-[37px]">
             <svg

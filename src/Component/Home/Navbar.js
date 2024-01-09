@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import logoImg from "../../assets/logo.png";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [show, setShow] = useState(false);
   const handleClick = () => {
     setOpen(!open);
+  };
+  const showItems = () => {
+    setShow(!show);
   };
   return (
     <>
@@ -25,6 +31,7 @@ export default function Navbar() {
           >
             Contact Sales
           </button>
+
           {!open ? (
             <div
               className="py-3 px-3 bg-[#EFF0FF] text-[#565ADD] rounded-full"
@@ -55,6 +62,23 @@ export default function Navbar() {
             </div>
           )}
         </div>
+        {open && (
+          <div
+            className="bg-white absolute flex items-center justify-between px-16 
+          top-[96px] w-full left-[0] py-10  border-b border-gray-500"
+          >
+            <h3 className="text-2xl ">Use Cases</h3>
+            {!show ? (
+              <span>
+                <FontAwesomeIcon icon={faChevronDown} onClick={showItems} />
+              </span>
+            ) : (
+              <span>
+                <FontAwesomeIcon icon={faChevronUp} onClick={showItems} />
+              </span>
+            )}
+          </div>
+        )}
       </div>
     </>
   );
