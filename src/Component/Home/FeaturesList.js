@@ -13,7 +13,7 @@ function FeaturesList() {
       <h1 className="text-5xl font-semibold my-12 py-10">
         Powerful features for easy, custom recordings
       </h1>
-      <div className="flex flex-col gap-7">
+      <div className="flex flex-col gap-7 items-center">
         <ListCard
           list={"Screen and camera recording"}
           list2={"Easy sharing and embedding"}

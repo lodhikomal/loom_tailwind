@@ -9,7 +9,7 @@ import VideoMsg from "./Home/VideoMsg";
 import FeaturesList from "./Home/FeaturesList";
 import Blog from "./Home/Blog";
 import Enterprise from "./Home/Enterprise";
-import Slider from "./Home/Slider";
+import Slider from "./Home/Sliders";
 import GetLink from "./Home/getLink";
 import Footer from "./Home/Footer";
 // import Features from "./Home/Features";
@@ -28,7 +28,7 @@ function Home() {
       <FeaturesList />
       <Blog />
       <Enterprise />
-      {/* <Slider /> */}
+      <Slider />
       <GetLink />
       <Footer />
     </div>

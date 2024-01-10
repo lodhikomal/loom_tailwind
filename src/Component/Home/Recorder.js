@@ -1,4 +1,4 @@
-import { faPause, faPlay, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faPause, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useRef, useState } from "react";
 function Recorder() {
@@ -227,10 +227,7 @@ function Recorder() {
               </text>
             </g>
           </svg>
-          <div
-            className="absolute top-[10.5rem] left-[10rem] mobile:top-[5.5rem]
-           mobile:left-[5rem] tablet:top-[4.5rem] tablet:left-[5rem]"
-          >
+          <div className="translate-x-[-50%] translate-y-[-58%]  top-1/2 left-1/2 absolute">
             <video
               ref={videoRef}
               autoPlay
