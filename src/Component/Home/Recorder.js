@@ -272,7 +272,7 @@ function Recorder() {
         >
           <div className="flex gap-4  ">
             <span
-              className="mt-2 animate-pulse h-[30px] w-[3rem] bg-[#eb7267]
+              className="mt-2 animate-pulse h-[30px] w-[3.5rem] bg-[#eb7267]
              border-[#FFEDEC] border-8 rounded-full"
             >
               {" "}
